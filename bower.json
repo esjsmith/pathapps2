@@ -1,0 +1,31 @@
+{
+  "name": "pathapps",
+  "version": "0.0.1",
+  "authors": [
+    "Emily"
+  ],
+  "description": "Pathologically useful applications",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "pathology",
+    "helpers"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-ui": "~0.4.0",
+    "jquery": "~2.1.4",
+    "angular-bootstrap": "~0.13.3",
+    "bootstrap-sass-official": "~3.3.5",
+    "angular-animate": "~1.4.3"
+  }
+}
