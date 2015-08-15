@@ -1,18 +1,12 @@
-/**
- * TODO: add packages: app-root-dir or app-root
- */
-
-/**
- *  Welcome to your gulpfile!
- *  The gulp tasks are splitted in several files in the gulp directory
- *  because putting all here was really too long
- */
-
 'use strict';
+
+var appRoot = require('app-root-path').path; // Package to find root of project
 
 var gulp = require('gulp');
 var wrench = require('wrench');
-var config = require('./gulp/config.js');
+var hlp = require(appRoot + '/gulp/helpers')();
+var config = require(appRoot + '/gulp/config.js')();
+var $ = require('gulp-load-plugins')({lazy: true});
 
 /**
  *  This will load all js or coffee files in the gulp directory
@@ -25,3 +19,5 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
   .map(function(file) {
     require('./gulp/' + file);
 });
+
+gulp.task('help', $.taskListing);

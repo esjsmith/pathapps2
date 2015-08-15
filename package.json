@@ -19,10 +19,12 @@
   },
   "devDependencies": {
     "app-root-dir": "^1.0.2",
+    "app-root-path": "^1.0.0",
     "gulp": "^3.9.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-nodemon": "^2.0.3",
     "gulp-plumber": "^1.0.1",
+    "gulp-task-listing": "^1.0.1",
     "gulp-util": "^3.0.6",
     "lodash": "^3.10.1",
     "utils": "^0.2.2",

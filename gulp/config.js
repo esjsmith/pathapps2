@@ -4,14 +4,15 @@
  */
 module.exports = function () {
   'use strict';
-  var paths, app, appRootDir;
+  var paths, app, appRootDir, appRootPath;
   app = require('express')();
   appRootDir = require('app-root-dir').get() + '/';
+  appRootPath = require('app-root-path').path + '/';
 
   paths = {
     bower: {
-      json: require(appRootDir + 'bower.json'),
-      directory: appRootDir + 'bower_components/',
+      json: require(appRootPath + 'bower.json'),
+      directory: appRootPath + 'bower_components/',
       ignorePath: '../..',
       onError: function(err) {
         console.log("Problem!");
