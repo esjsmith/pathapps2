@@ -4,9 +4,8 @@
  */
 module.exports = function () {
   'use strict';
-  var paths, app, appRootDir, appRootPath;
+  var paths, app, appRootPath;
   app = require('express')();
-  appRootDir = require('app-root-dir').get() + '/';
   appRootPath = require('app-root-path').path + '/';
 
   paths = {
@@ -17,7 +16,8 @@ module.exports = function () {
       onError: function(err) {
         console.log("Problem!");
         console.log(err);
-      }
+      },
+      gulpPath: appRootPath + 'gulp/'
     },
     temp: '/.tmp/',
     views: app.get('views')
@@ -33,8 +33,9 @@ module.exports = function () {
         ignore: paths.bower.ignorePath
       };
     },
-    index: '../views/layout',
-    views: paths.views
+    index: app.get('views') + '/index.jade',
+    views: paths.views,
+    gulpPath: paths.gulpPath
   };
 
 };
